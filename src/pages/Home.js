@@ -8,11 +8,14 @@ const Home = () => {
 
     return (
         <div className='flex-center-column gap-sm'>
-            <h3 className='title my-md'> Hello World</h3>
-            <Suspense fallback={<h2 className='grid-center'>Loading</h2>}>
-            <p> Let's Code Together </p>
-            <p className="text"></p>
+            <div className="h-container w-full flex-center-column">
+                <h3 className='title my-md'> Hello World</h3>
+                <p> Let's Code Together </p>
+                <p className="text"> Page is currently on building phase</p>
+            </div>
 
+
+            <Suspense fallback={<h2 className='grid-center'>Loading</h2>}>
             <Card >
                 <h4  style={{color : 'var(--color-gray-700)'}}>Progressive Web Apps 🤪</h4>
                 <p className='color-gray-500 my-md font-default'>An application software delivered through web, built using common web technologies including HTML, CSS and JavaScript.  </p>

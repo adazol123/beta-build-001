@@ -147,7 +147,7 @@
 .h {
     &-full {height: 100%;}
     &-max { height: 100vh;}
-    &-container {height: calc(100vh - 64px);}
+    &-container {height: calc(80vh - 64px);}
     &-sm { min-height: 172px;}
     &-md { min-height: 372px; margin-top: -72px;}
 }
