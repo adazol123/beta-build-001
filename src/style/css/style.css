@@ -140,6 +140,17 @@
   padding: 64px 0;
 }
 
+.border-radii {
+  background: rgba(var(--theme-container-background), 0.55);
+  width: 100%;
+  max-width: 768px;
+  border-radius: 16px 16px 0 0;
+  -webkit-border-radius: 16px 16px 0 0;
+  -moz-border-radius: 16px 16px 0 0;
+  -ms-border-radius: 16px 16px 0 0;
+  -o-border-radius: 16px 16px 0 0;
+}
+
 .grid, .grid-center {
   display: grid;
 }
