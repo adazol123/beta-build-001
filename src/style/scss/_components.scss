@@ -159,31 +159,57 @@
     min-height: calc(100vh - var(--nav-height));
 }
 
+.animate-01{
+    transition: 0.4s ease;
+    -webkit-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+    -ms-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+}
+
 .menu-bar {
+    @extend .animate-01;
     z-index: 998;
+    overflow: hidden;
     &-hidden{
         z-index: 998;
+        //height: 2px;
         transform: translateY(92%);
         -webkit-transform: translateY(92%);
         -moz-transform: translateY(92%);
         -ms-transform: translateY(92%);
         -o-transform: translateY(92%);
-    }
+        overflow: hidden;
+        @extend .animate-01;
+}
+}
+
+.active {
+    display: flex;
+    opacity: 1;
+    @extend .animate-01;
+}
+.inactive {
+    display: hidden;
+    opacity: 0;
+    @extend .animate-01;
 }
 
 .nav-menu-wrapper {
-    
+
     &-hidden {
+        @extend .animate-01;
         display: none;
         backdrop-filter: blur(0) opacity(1);
     }
+    @extend .animate-01;
     display: block;
     position: fixed;
     height: 100vh;
     width: 100%;
-    overflow-y: hidden;
+    overflow: hidden;
     z-index: 997;
-    backdrop-filter: blur(2px) opacity(0.8) grayscale(1);
+    backdrop-filter: blur(4px) opacity(1) grayscale(0);
     
 }
 
@@ -220,12 +246,36 @@
 }
 
 .solarize, .solarize-center {
-    transition: .8s ease-out;
-    -webkit-transition: .8s ease-out;
-    -moz-transition: .8s ease-out;
-    -ms-transition: .8s ease-out;
-    -o-transition: .8s ease-out;
+    transition: .8s ease;
+    -webkit-transition: .8s ease;
+    -moz-transition: .8s ease;
+    -ms-transition: .8s ease;
+    -o-transition: .8s ease;
 }
+ .menu-bottom, .menu-top {
+    @extend .animate-01;
+}
+
+
+html[data-toggle="true"] {
+    .menu-top {
+        transform: rotate(45deg) translateY(2px);
+        -webkit-transform: rotate(45deg) translateY(2px);
+        -moz-transform: rotate(45deg) translateY(2px);
+        -ms-transform: rotate(45deg) translateY(2px);
+        -o-transform: rotate(45deg) translateY(2px);
+        transform-origin: center;
+ }
+    .menu-bottom {
+        transform: rotate(-45deg)  translateX(3px);
+        -webkit-transform: rotate(-45deg)  translateX(3px);
+        -moz-transform: rotate(-45deg)  translateX(3px);
+        -ms-transform: rotate(-45deg)  translateX(3px);
+        -o-transform: rotate(-45deg)  translateX(3px);
+        transform-origin: center;
+}
+}
+
 
 html[data-theme="dark"]{
     .solarize {

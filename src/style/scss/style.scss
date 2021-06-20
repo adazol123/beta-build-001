@@ -26,6 +26,7 @@ html, body {
     background: var(--theme-background);
     color: var(--theme-forground);
     font-size: 18px;
+
     z-index: 0;
     transition: background .15s ease-out ;
     -webkit-transition: background .15s ease-out ;
@@ -33,6 +34,26 @@ html, body {
     -ms-transition: background .15s ease-out ;
     -o-transition: background .15s ease-out ;
 }
+body {
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--theme-background);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--theme-accent);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 
 
 

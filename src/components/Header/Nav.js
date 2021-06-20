@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState} from 'react'
 import { DarkToggle } from '../DarkToggle'
 import {logo, menu, arrow_left } from '../asset-icons'
 import { Link,  useHistory, useLocation } from 'react-router-dom'
 import NavMenu from '../Menu/NavMenu'
 
-export const Nav = () => {
+const Nav = () => {
     
     const history = useHistory()
     const location = useLocation()
@@ -77,3 +77,5 @@ const NavMain = ({ history, isPathname, setToggleMenu, toggleMenu}) => {
          </>
     )
 }
+
+export default Nav

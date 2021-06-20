@@ -2,7 +2,7 @@ import React from 'react'
 import { buttons } from '../components/Button/buttons'
 
 
-export const Components = () => {
+const Components = () => {
    
     return (
         <div className='wrapper'>
@@ -25,3 +25,5 @@ export const Components = () => {
         </div>
     )
 }
+
+export default Components

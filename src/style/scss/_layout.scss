@@ -131,7 +131,7 @@
 
 
 .font {
-    &-sub-footer { font-size: 8px; line-height: 12px; letter-spacing: 0.04em; font-weight: 400;}
+    &-sub-footer { font-size: 12px; line-height: 12px; letter-spacing: 0.04em; font-weight: 400; transform: scale(0.7); -webkit-transform: scale(0.7); -moz-transform: scale(0.7); -ms-transform: scale(0.7); -o-transform: scale(0.7); }
     &-xs{ font-size: 14px; line-height: 24px; letter-spacing: 0.04em; font-weight: 600;}
     &-sm{ font-size: 18px; line-height: 24px; font-weight: 600;}
     &-md{ font-size: 26px; line-height: 32px; font-weight: 400;}
