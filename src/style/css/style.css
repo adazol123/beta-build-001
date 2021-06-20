@@ -201,7 +201,7 @@
 }
 .flex-space-between, .flex-space-between-column, .flex-space-between-row {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
 }
 .flex-space-between-row {
@@ -215,11 +215,29 @@
   text-align: center;
 }
 
-.fixed-top {
+.pos-top-fixed {
+  position: fixed;
+  top: 0;
+}
+.pos-top-sticky {
   position: sticky;
   top: 0;
 }
+.pos-bottom-fixed {
+  position: fixed;
+  bottom: 0;
+}
+.pos-bottom-sticky {
+  position: sticky;
+  bottom: 0;
+}
 
+.font-sub-footer {
+  font-size: 8px;
+  line-height: 12px;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+}
 .font-xs {
   font-size: 14px;
   line-height: 24px;
@@ -410,7 +428,7 @@
 button {
   background: none;
   border-style: none;
-  padding: 0px 8px;
+  padding: 2px 0px;
   cursor: pointer;
   border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -593,14 +611,35 @@ button {
   box-shadow: var(--shadow-md);
 }
 
-.logo:hover, .logo:focus, .logo:active {
+.nav-icon:hover, .nav-icon:focus, .nav-icon:active {
   color: var(--theme-accent);
 }
 
 .nav-bg {
+  background: var(--theme-background);
   box-shadow: var(--shadow-sm);
-  backdrop-filter: grayscale(0.8) blur(10px);
+  backdrop-filter: grayscale(0) blur(5px);
   z-index: 999;
+  min-height: var(--nav-height);
+  display: inline-flex;
+  overflow: hidden;
+}
+
+.wrapper {
+  overflow: scroll;
+  min-height: calc(100vh - var(--nav-height));
+}
+
+.menu-bar {
+  z-index: 998;
+}
+.menu-bar-hidden {
+  z-index: 998;
+  transform: translateY(92%);
+  -webkit-transform: translateY(92%);
+  -moz-transform: translateY(92%);
+  -ms-transform: translateY(92%);
+  -o-transform: translateY(92%);
 }
 
 .test {
@@ -676,6 +715,10 @@ html[data-theme=light] .solarize-center {
   background-color: #ffc107;
 }
 
+body {
+  overflow: scroll;
+}
+
 :root {
   --space: 4px;
   --space-2x: 8px;
@@ -699,6 +742,7 @@ html[data-theme=light] .solarize-center {
   --space-large-negative: -48px;
   --space-gap-negative: -24px;
   --space-gap-half-negative: -12px;
+  --nav-height: 42px;
   --theme-background: #171a1c;
   --theme-forground: #e0e6eb;
 }

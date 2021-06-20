@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react'
-import { Theme as DarkToggle } from '../Theme'
+import { DarkToggle } from '../DarkToggle'
 import {logo, menu, arrow_left } from '../asset-icons'
 import { Link,  useHistory, useLocation } from 'react-router-dom'
-import { NavSub } from './NavSub'
+import NavMenu from '../Menu/NavMenu'
 
 export const Nav = () => {
     
     const history = useHistory()
     const location = useLocation()
     const pathname = location.pathname
+    const [toggleMenu, setToggleMenu] = useState(false)
     const [isPathname, setPathname] = useState(pathname)
     
     useEffect(() => {
@@ -17,12 +18,61 @@ export const Nav = () => {
     
     return (
         <>
-       <div className='flex-space-between-row p-md fixed-top nav-bg'>
-           {isPathname === '/'? <button className='color-gray-500'>{menu}</button> : <button  onClick={() => history.goBack()}>{arrow_left}</button>}
-            <Link className='color-gray-400 logo'to={{ pathname:'/',state: { fromDashboard: true }}} > {logo}</Link>
-            {isPathname === '/'? <DarkToggle className='color-gray-500'/> : <> <button>{menu}</button> <DarkToggle className='hidden color-gray-500'/></>}
-
-        </div> 
+        {isPathname === '/' 
+        ?   <NavMain history={history} isPathname={isPathname} toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} /> 
+        :   <NavSub history={history} title="Component"/>}
+        <NavMenu toggleMenu={toggleMenu} setToggleMenu={setToggleMenu}/>
         </>
+    )
+}
+
+
+const NavSub = ( {title, history}) => {
+    
+    return (
+        <>
+        <div 
+         className='flex-space-between-row w-full pos-top-sticky nav-bg px-md'>
+
+             <button 
+                 className='color-gray-500 nav-icon flex-center-row' 
+                 onClick={() => history.goBack()}>
+                     {arrow_left} <p>Back</p>
+             </button>
+
+             <button 
+                className='color-gray-500 nav-icon'>
+                    {menu}
+            </button>
+             
+         </div> 
+
+
+         </>
+    )
+}
+const NavMain = ({ history, isPathname, setToggleMenu, toggleMenu}) => {
+    return (
+        <>
+        <div 
+        className='flex-space-between-row w-full pos-top-sticky nav-bg px-md'>
+            <button 
+                className='color-gray-500 nav-icon'
+                onClick={() => setToggleMenu(!toggleMenu)}
+                >
+                    {menu}
+            </button>
+
+            <Link 
+                className='color-gray-400 nav-icon'
+                to={{ pathname:'/', state: { fromDashboard: true }}} > 
+                    {logo}
+            </Link>
+
+
+            <DarkToggle 
+                className='color-gray-500 nav-icon'/> 
+        </div> 
+         </>
     )
 }

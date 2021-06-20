@@ -107,7 +107,7 @@
     }
     &-space-between {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             justify-content: space-between;
             &-row {@extend .flex-space-between; flex-direction: row;}
             &-column {@extend .flex-space-between; flex-direction: column;}
@@ -118,11 +118,20 @@
     text-align: center;
 }
 
-.fixed {
-    &-top{ position: sticky; top: 0;}
+.pos {
+    &-top{ 
+        &-fixed {  position: fixed; top: 0;}
+        &-sticky { position: sticky; top: 0;}
+    }
+    &-bottom{ 
+        &-fixed {  position: fixed; bottom: 0;}
+        &-sticky { position: sticky; bottom: 0;}
+    }
 }
 
+
 .font {
+    &-sub-footer { font-size: 8px; line-height: 12px; letter-spacing: 0.04em; font-weight: 400;}
     &-xs{ font-size: 14px; line-height: 24px; letter-spacing: 0.04em; font-weight: 600;}
     &-sm{ font-size: 18px; line-height: 24px; font-weight: 600;}
     &-md{ font-size: 26px; line-height: 32px; font-weight: 400;}
@@ -217,7 +226,7 @@
 button {
     background: none;
     border-style: none;
-    padding: 0px 8px;
+    padding: 2px 0px;
     cursor: pointer;
     border-radius: 4px;
     -webkit-border-radius: 4px;

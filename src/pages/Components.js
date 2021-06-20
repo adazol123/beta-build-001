@@ -5,7 +5,7 @@ import { buttons } from '../components/Button/buttons'
 export const Components = () => {
    
     return (
-        <div className=''>
+        <div className='wrapper'>
             <div className="container-full flex-start-column flex-start-bottom-left  h-md p-xl mx-auto"
                 style={{ background: 'url(https://images.unsplash.com/photo-1623660128509-720fc7f90317?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80)', backdropFilter: 'opacity(0.1)'}}
             >

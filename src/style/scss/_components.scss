@@ -139,17 +139,36 @@
     -o-transition: 0.3s ease-in-out;
 }
 
-.logo {
+.nav-icon {
     &:hover, &:focus, &:active{
         color: var(--theme-accent);
     }
 }
 
 .nav-bg {
-    // background: var(--theme-background);
+    background: var(--theme-background);
     box-shadow: var(--shadow-sm);
-    backdrop-filter: grayscale(.8) blur(10px);
+    backdrop-filter: grayscale(0) blur(5px);
     z-index: 999;
+    min-height: var(--nav-height);
+    display: inline-flex;
+    overflow: hidden;
+}
+.wrapper {
+    overflow: scroll;
+    min-height: calc(100vh - var(--nav-height));
+}
+
+.menu-bar {
+    z-index: 998;
+    &-hidden{
+        z-index: 998;
+        transform: translateY(92%);
+        -webkit-transform: translateY(92%);
+        -moz-transform: translateY(92%);
+        -ms-transform: translateY(92%);
+        -o-transform: translateY(92%);
+    }
 }
 
 .test {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { solarize } from './asset-icons';
 
-export const Theme = (props) => {
+export const DarkToggle = (props) => {
     const [ isDark, setDark ] = useState(true);
     
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -13,7 +13,7 @@ export const Theme = (props) => {
     }
     return (
         <button onClick={toggleTheme} {...props}>
-            {solarize}
+            {solarize} {props.children}
         </button>
     )
 }

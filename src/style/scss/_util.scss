@@ -14,6 +14,9 @@ $theme-colors: (
     // Instead of $theme-color-#{warning}
     background-color: map.get($theme-colors, "warning");
 }
+body {
+    overflow: scroll;
+}
 
 
 :root {
@@ -40,6 +43,7 @@ $theme-colors: (
     --space-large-negative: -48px;
     --space-gap-negative: -24px;
     --space-gap-half-negative: -12px;
+    --nav-height: 42px;
 
 
 
