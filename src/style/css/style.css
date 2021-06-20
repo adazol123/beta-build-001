@@ -649,11 +649,11 @@ button {
 }
 .menu-bar-hidden {
   z-index: 998;
-  transform: translateY(92%);
-  -webkit-transform: translateY(92%);
-  -moz-transform: translateY(92%);
-  -ms-transform: translateY(92%);
-  -o-transform: translateY(92%);
+  transform: translateY(90%);
+  -webkit-transform: translateY(90%);
+  -moz-transform: translateY(90%);
+  -ms-transform: translateY(90%);
+  -o-transform: translateY(90%);
   overflow: hidden;
 }
 
@@ -808,7 +808,7 @@ body {
   --space-large-negative: -48px;
   --space-gap-negative: -24px;
   --space-gap-half-negative: -12px;
-  --nav-height: 42px;
+  --nav-height: 52px;
   --theme-background: #171a1c;
   --theme-forground: #e0e6eb;
 }

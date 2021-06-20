@@ -15,7 +15,7 @@ const NavMenu = ({ toggleMenu, setToggleMenu}) => {
         <div className={toggleMenu? 'nav-menu-wrapper' : 'nav-menu-hidden'}
             onClick={() => setToggleMenu(false)}/>
         <div className={`w-full flex-center-column pos-bottom-fixed ${toggleMenu? 'menu-bar' : 'menu-bar-hidden'}`}>
-            <button className='menu-bar-button w-full h-full' onClick={() => setToggleMenu(!toggleMenu)}> {menu_bar}</button>
+            <button className='menu-bar-button w-full h-full py-xs' onClick={() => setToggleMenu(!toggleMenu)}> {menu_bar}</button>
             <div className={`container-sm color-gray-800 bg-gray-50 p-md flex-start-left flex-start-column gap-sm ${toggleMenu? 'active' : 'inactive'}`}
                 
             >
