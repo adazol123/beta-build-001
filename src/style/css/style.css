@@ -642,6 +642,20 @@ button {
   -o-transform: translateY(92%);
 }
 
+.nav-menu-wrapper {
+  display: block;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  overflow-y: hidden;
+  z-index: 997;
+  backdrop-filter: blur(2px) opacity(0.8) grayscale(1);
+}
+.nav-menu-wrapper-hidden {
+  display: none;
+  backdrop-filter: blur(0) opacity(1);
+}
+
 .test {
   position: relative;
   background: transparent;

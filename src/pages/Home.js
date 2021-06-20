@@ -6,9 +6,15 @@ export const Home = () => {
     return (
         <div className='flex-center-column gap-sm'>
             <Link to='/components'>
-            <h1 className='title'> Welcome!</h1>
+            <img src="/git-logo-adazolhub-small.png" height='120px' alt="" />
             </Link>
-            
+            <h1 className='title'> Welcome!</h1>
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
         </div>
     )
 }

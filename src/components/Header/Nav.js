@@ -20,14 +20,14 @@ export const Nav = () => {
         <>
         {isPathname === '/' 
         ?   <NavMain history={history} isPathname={isPathname} toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} /> 
-        :   <NavSub history={history} title="Component"/>}
+        :   <NavSub history={history} title="Component" toggleMenu={toggleMenu} setToggleMenu={setToggleMenu}/>}
         <NavMenu toggleMenu={toggleMenu} setToggleMenu={setToggleMenu}/>
         </>
     )
 }
 
 
-const NavSub = ( {title, history}) => {
+const NavSub = ( {title, history, setToggleMenu, toggleMenu}) => {
     
     return (
         <>
@@ -41,7 +41,8 @@ const NavSub = ( {title, history}) => {
              </button>
 
              <button 
-                className='color-gray-500 nav-icon'>
+                className='color-gray-500 nav-icon'
+                onClick={() => setToggleMenu(!toggleMenu)}>
                     {menu}
             </button>
              
