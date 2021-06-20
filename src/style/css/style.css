@@ -758,6 +758,16 @@ html[data-toggle=true] .menu-bottom {
   color: var(--theme-accent);
 }
 
+html[data-toggle=true] body {
+  overflow: hidden;
+  height: 100%;
+}
+
+html[data-toggle=false] body {
+  overflow: auto;
+  height: auto;
+}
+
 html[data-theme=dark] .solarize {
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);

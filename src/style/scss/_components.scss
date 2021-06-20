@@ -285,6 +285,19 @@ html[data-toggle="true"] {
 }
 }
 
+html[data-toggle="true"] {
+    body {
+        overflow: hidden;
+        height: 100%;
+    }
+}
+html[data-toggle="false"] {
+    body {
+        overflow: auto;
+        height: auto;
+    }
+}
+
 
 html[data-theme="dark"]{
     .solarize {
