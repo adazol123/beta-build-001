@@ -22,8 +22,8 @@ const LazyFrame = ({ children, setToggleMenu }) => {
             }}
         
             onDragEnd={function() {
-            if(y.get() > 30) {setToggleMenu(false)}
-            else if (y.get() < -50) setToggleMenu(true)
+            if(y.get() > 20) {setToggleMenu(false)}
+            else if (y.get() < -30) setToggleMenu(true)
             }}
         >
             {children}
