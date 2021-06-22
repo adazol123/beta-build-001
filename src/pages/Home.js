@@ -7,12 +7,15 @@ const Card = lazy(()=> import('../components/Card/Card'))
 const Home = () => {
 
     return (
-        <div className='flex-center-column gap-sm'>
+        <div className='flex-center-column gap-sm mx-lg home'>
             <div className="h-container w-full flex-center-column">
-                <h3 className='title my-md'> Hello World</h3>
-                <p> Let's Code Together </p>
-                <p className="text"> Page is currently on building phase</p>
+
+                <h3 className='title  font-xl'> Hello</h3>
+                {/* <p className='my-md color-gray-400'>Adazolhub is an imaginary business company of the creator of this website </p> */}
+                <p className="text "> Do more of what makes you happy  </p>
             </div>
+
+
 
 
             <Suspense fallback={<h2 className='grid-center'>Loading</h2>}>

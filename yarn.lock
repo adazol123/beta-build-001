@@ -5043,6 +5043,11 @@ fragment-cache@^0.2.1:
   dependencies:
     map-cache "^0.2.2"
 
+framer@^1.3.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/framer/-/framer-1.3.2.tgz#4670ab2be1a5a820b2513bcf2d62c272bb726446"
+  integrity sha512-0KmhUp+JFJr8ttVF5gTIXPy5JLBVb42wXYI6yuyoEK956wsKrpO40db23TBh5AIWKtr9cSyTpDWq7LYSMRj3zA==
+
 fresh@0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/fresh/-/fresh-0.5.2.tgz#3d8cadd90d976569fa835ab1f8e4b23a105605a7"

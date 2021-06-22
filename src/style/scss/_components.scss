@@ -207,7 +207,7 @@
     position: fixed;
     height: 100vh;
     width: 100%;
-    overflow: hidden;
+    // overflow: hidden;
     z-index: 997;
     backdrop-filter: blur(4px) opacity(1) grayscale(0);
     
@@ -261,6 +261,13 @@
 }
  .menu-bottom, .menu-top {
     @extend .animate-01;
+}
+
+.home {
+    position: relative;
+    // width: 100%;
+    z-index: 2;
+
 }
 
 

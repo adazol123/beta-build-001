@@ -59,12 +59,21 @@ a {
 
 .title {
     color: var(--theme-accent);
+    z-index: 2;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .text {
     color: var(--theme-text-gray);
-    font-size: 12px;
+    font-size: 16px;
+    max-width: 20ch;
+    z-index: 2;
+    text-align: center;
+
 }
+
+
 .wrap {
     word-wrap: break-word;
     text-align: start;
