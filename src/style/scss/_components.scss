@@ -170,7 +170,7 @@
 .menu-bar {
     @extend .animate-01;
     z-index: 998;
-    overflow: hidden;
+    // overflow: hidden;
     &-hidden{
         z-index: 998;
         //height: 2px;
@@ -179,19 +179,17 @@
         -moz-transform: translateY(90%);
         -ms-transform: translateY(90%);
         -o-transform: translateY(90%);
-        overflow: hidden;
+        // overflow: hidden;
         @extend.animate-01;
 }
 }
 
 .active {
-    display: flex;
     opacity: 1;
     @extend .animate-01;
 }
 .inactive {
-    display: hidden;
-    opacity: 0;
+    opacity: 0.8;
     @extend .animate-01;
 }
 

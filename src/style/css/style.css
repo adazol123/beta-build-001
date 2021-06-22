@@ -656,7 +656,6 @@ button {
 
 .menu-bar {
   z-index: 998;
-  overflow: hidden;
 }
 .menu-bar-hidden {
   z-index: 998;
@@ -665,17 +664,14 @@ button {
   -moz-transform: translateY(90%);
   -ms-transform: translateY(90%);
   -o-transform: translateY(90%);
-  overflow: hidden;
 }
 
 .active {
-  display: flex;
   opacity: 1;
 }
 
 .inactive {
-  display: hidden;
-  opacity: 0;
+  opacity: 0.8;
 }
 
 .nav-menu-wrapper {
@@ -953,11 +949,12 @@ a {
   z-index: 2;
   text-transform: uppercase;
   text-align: center;
+  font-size: 24px;
 }
 
 .text {
   color: var(--theme-text-gray);
-  font-size: 16px;
+  font-size: 14px;
   max-width: 20ch;
   z-index: 2;
   text-align: center;
