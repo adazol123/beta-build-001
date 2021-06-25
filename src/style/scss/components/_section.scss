@@ -181,6 +181,11 @@
                 height: 42px;
                 filter: opacity(0.3);
                 -webkit-filter: opacity(0.3);
+                user-select: none;
+                -moz-user-select: none;
+                -webkit-user-drag: none;
+                -ms-user-select: none;
+                -webkit-user-select: none;
 
                 }
 

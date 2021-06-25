@@ -2209,6 +2209,11 @@ button {
   height: 42px;
   filter: opacity(0.3);
   -webkit-filter: opacity(0.3);
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
 }
 .tech-section .logo-slider .logo-slide img:hover, .tech-section .logo-slider .below img:hover {
   filter: opacity(0.8);
