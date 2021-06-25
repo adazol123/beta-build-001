@@ -9,20 +9,51 @@ const TechStackSection = () => {
             <div className="logos-container">
                 <div className="logo-slider">
                     <div className="logo-slide">
-                        {icons.map((icon, index)  => (<img key={index} src={icon} alt={icon}/>))}
+                        {icons.map((icon, index)  => (
+                        <div key={index} style={{ 
+                            backgroundImage: `url(/assets/svg/tech-logos/logo-${index + 1}.svg) `,
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundSize: 'contain'
+                        ,
+                        }} alt={icon}/>
+                        ))}
                     </div>
                     <div className="logo-slide">
-                        {icons.map((icon, index)  => (<img key={index} src={icon} alt={icon}/>))}
+                        {icons.map((icon, index)  => (
+                        <div key={index} style={{ 
+                            backgroundImage: `url(/assets/svg/tech-logos/logo-${index + 1}.svg) `,
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundSize: 'contain'
+                        ,
+                        }} alt={icon}/>
+                        ))}
                     </div>
                 </div>
             </div>
             <div className="logos-container">
                 <div className="logo-slider">
                     <div className="logo-slide below">
-                        {iconss.map((icon, index)  => (<img  key={index} src={icon} alt={icon} />))}
+                        {iconss.map((icon, index)  => (
+                        <div key={index} style={{ 
+                            backgroundImage: `url(/assets/svg/tech-logos/logo-0${index + 1}.svg)`,
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundSize: 'contain'
+                        }} alt={icon}/>
+                    
+                        ))}
                     </div>
                     <div className="logo-slide below">
-                        {iconss.map((icon, index)  => (<img  key={index} src={icon} alt={icon} />))}
+                        {iconss.map((icon, index)  => (
+                        <div key={index} style={{ 
+                            backgroundImage: `url(/assets/svg/tech-logos/logo-0${index + 1}.svg)`,
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundSize: 'contain'
+                        }} alt={icon}/>
+                        ))}
                     </div>
 
                 </div>

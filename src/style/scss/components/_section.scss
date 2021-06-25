@@ -170,8 +170,10 @@
 
     .logo-slider {
         display: flex;
+        gap: 0;
         .logo-slide {
             display: flex;
+            width: 100%;
             animation: slidelogos 90s linear infinite;
             -webkit-animation: slidelogos 90s linear infinite;
                 img
@@ -188,6 +190,25 @@
                 -webkit-user-select: none;
 
                 }
+                div
+                {
+                &:hover { filter: opacity(0.8); -webkit-filter: opacity(0.8); }
+                margin: 0 22px;
+                height: 42px;
+                min-width: 80px;
+                filter: opacity(0.3);
+                -webkit-filter: opacity(0.3);
+                user-select: none;
+                -moz-user-select: none;
+                -webkit-user-drag: none;
+                -ms-user-select: none;
+                -webkit-user-select: none;
+
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+
+                }
 
 
         }
@@ -197,6 +218,12 @@
             img { 
                 height: 62px;
                 padding: 0 40px;
+
+            }
+            div { 
+                height: 62px;
+                margin: 0 20px;
+                width: 150px;
 
             }
         }
@@ -302,7 +329,7 @@
         -moz-transform: translateX(-100%);
         -ms-transform: translateX(-100%);
         -o-transform: translateX(-100%);
-    }
+}
 }
 
 

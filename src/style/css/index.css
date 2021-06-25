@@ -2198,9 +2198,11 @@ button {
 }
 .tech-section .logo-slider {
   display: flex;
+  gap: 0;
 }
 .tech-section .logo-slider .logo-slide, .tech-section .logo-slider .below {
   display: flex;
+  width: 100%;
   animation: slidelogos 90s linear infinite;
   -webkit-animation: slidelogos 90s linear infinite;
 }
@@ -2219,12 +2221,36 @@ button {
   filter: opacity(0.8);
   -webkit-filter: opacity(0.8);
 }
+.tech-section .logo-slider .logo-slide div, .tech-section .logo-slider .below div {
+  margin: 0 22px;
+  height: 42px;
+  min-width: 80px;
+  filter: opacity(0.3);
+  -webkit-filter: opacity(0.3);
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.tech-section .logo-slider .logo-slide div:hover, .tech-section .logo-slider .below div:hover {
+  filter: opacity(0.8);
+  -webkit-filter: opacity(0.8);
+}
 .tech-section .logo-slider .below {
   animation: slidelogos 40s linear infinite reverse;
 }
 .tech-section .logo-slider .below img {
   height: 62px;
   padding: 0 40px;
+}
+.tech-section .logo-slider .below div {
+  height: 62px;
+  margin: 0 20px;
+  width: 150px;
 }
 
 .tech-sub-container {
