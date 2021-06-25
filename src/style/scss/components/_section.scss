@@ -132,23 +132,13 @@
 
     .logos-container {
         // background-color: gray;
-        // height: ;
+        height: 100px;
         width: 100%;
-        // overflow: hidden;
-        display: flex;
-        // align-items: center;
-        justify-content: center;
-    }
-
-    .logo-slider {
-        height: $slide-height;
-        width: 100vw;
-        // background: white;
-
-        position: relative;
-
-        display: flex;
         overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
 
         &::before,
         &::after {
@@ -178,56 +168,89 @@
         }
     }
 
-    .logo-slide {
-         div {
-            &:hover { filter: opacity(0.8); -webkit-filter: opacity(0.8); }
-            height: 42px;
-            width: 100%;
-            margin: 0 16px;
-            filter: opacity(0.3);
-            -webkit-filter: opacity(0.3);
-
-            img {
-                user-select: none;
-                -moz-user-select: none;
-                -webkit-user-drag: none;
-                -ms-user-select: none;
-                -webkit-user-select: none;
-            }
-}
-        * .images {
-            &::hover { filter: opacity(1); -webkit-filter: opacity(1); }
-            height: 42px;
-            // padding: 0 64px;
-            filter: opacity(0.6);
-            -webkit-filter: opacity(0.6);
-}
-        height: $slide-height;
+    .logo-slider {
         display: flex;
-        align-items: center;
-        animation: slidelogos 90s linear infinite;
-        -webkit-animation: slidelogos 90s linear infinite;
-}
-    .below {
-        animation: slidelogos 40s linear infinite reverse;
-        -webkit-animation: slidelogos 40s linear infinite reverse;
+        .logo-slide {
+            display: flex;
+            animation: slidelogos 90s linear infinite;
+            -webkit-animation: slidelogos 90s linear infinite;
+                img
+                {
+                &:hover { filter: opacity(0.8); -webkit-filter: opacity(0.8); }
+                padding: 0 32px;
+                height: 42px;
+                filter: opacity(0.3);
+                -webkit-filter: opacity(0.3);
 
-         div {
-            &:hover, &:focus { filter: opacity(0.8); -webkit-filter: opacity(0.8); }
-            height: 42px;
-            margin: 0 42px !important;
-            padding-top: 16px;
-            filter: opacity(0.3);
-            -webkit-filter: opacity(0.3);
-            img {
-                user-select: none;
-                -moz-user-select: none;
-                -webkit-user-drag: none;
-                -ms-user-select: none;
-                -webkit-user-select: none;
+                }
+
+
+        }
+        .below {
+            @extend .logo-slide;
+            animation: slidelogos 40s linear infinite reverse;
+            img { 
+                height: 62px;
+                padding: 0 40px;
+
             }
-}
-}
+        }
+       
+    }
+
+//     .logo-slide {
+//          img {
+//             &:hover { filter: opacity(0.8); -webkit-filter: opacity(0.8); }
+//             height: 42px;
+//             width: 100%;
+//             padding: 0 36px;
+//             filter: opacity(0.3);
+//             -webkit-filter: opacity(0.3);
+
+//             img {
+//                 user-select: none;
+//                 -moz-user-select: none;
+//                 -webkit-user-drag: none;
+//                 -ms-user-select: none;
+//                 -webkit-user-select: none;
+//             }
+// }
+// //         * .images {
+// //             &::hover { filter: opacity(1); -webkit-filter: opacity(1); }
+// //             height: 42px;
+// //             // padding: 0 34px;
+// //             filter: opacity(0.6);
+// //             -webkit-filter: opacity(0.6);
+// // }
+//         height: $slide-height;
+//         display: flex;
+//         width: 500%;
+//         margin: 0 26px;
+//         gap: 6px;
+//         align-items: center;
+//         animation: slidelogos 90s linear infinite;
+//         -webkit-animation: slidelogos 90s linear infinite;
+// }
+//     .below {
+//         animation: slidelogos 40s linear infinite reverse;
+//         -webkit-animation: slidelogos 40s linear infinite reverse;
+
+//          img {
+//             &:hover, &:focus { filter: opacity(0.8); -webkit-filter: opacity(0.8); }
+//             height: 52px;
+//             padding: 0 32px ;
+//             // margin-bottom: 16px;
+//             filter: opacity(0.3);
+//             -webkit-filter: opacity(0.3);
+//             img {
+//                 user-select: none;
+//                 -moz-user-select: none;
+//                 -webkit-user-drag: none;
+//                 -ms-user-select: none;
+//                 -webkit-user-select: none;
+//             }
+// }
+// }
 
 
 }

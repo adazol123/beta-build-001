@@ -14,7 +14,7 @@ header {
 
     // background: var(--theme-background);
     // box-shadow: var(--shadow-sm);
-    backdrop-filter: grayscale(0) ;
+    backdrop-filter: grayscale(0) blur(10px) ;
     @extend .flex-vertical-between;
 
     .nav-wrapper {
@@ -28,6 +28,7 @@ header {
          * svg {
              color: $green-100;
          }
+         
     }
 
 
@@ -63,6 +64,7 @@ header {
         //overflow: hidden;
 }
     @extend.animate-01;
+    
     z-index: 998;
 
 }
@@ -149,13 +151,13 @@ header {
             &::after {
                 content: '';
                 position: absolute;
-                width: 8ch;
-                height: 1px;
-                bottom: 2px;
+                width: 9ch;
+                height: 8px;
+                bottom: -2px;
                 left: 0;
                 border-radius: 2px;
                 background-color: var(--theme-accent);
-                opacity: 0.7;
+                opacity: 0.5;
                 z-index: -1;
                 -webkit-border-radius: 2px;
                 -moz-border-radius: 2px;

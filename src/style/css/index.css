@@ -1298,7 +1298,7 @@ header {
   width: 100%;
   height: var(--nav-height);
   z-index: 9999;
-  backdrop-filter: grayscale(0);
+  backdrop-filter: grayscale(0) blur(10px);
 }
 header .nav-wrapper {
   width: 100%;
@@ -1401,13 +1401,13 @@ header .icons:hover, header .icons:focus, header .icons:active {
 .hero-section p span::after {
   content: "";
   position: absolute;
-  width: 8ch;
-  height: 1px;
-  bottom: 2px;
+  width: 9ch;
+  height: 8px;
+  bottom: -2px;
   left: 0;
   border-radius: 2px;
   background-color: var(--theme-accent);
-  opacity: 0.7;
+  opacity: 0.5;
   z-index: -1;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
@@ -2167,18 +2167,15 @@ button {
   left: calc(-110% * 2);
 }
 .tech-section .logos-container {
+  height: 100px;
   width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.tech-section .logo-slider {
-  height: 72px;
-  width: 100vw;
-  position: relative;
-  display: flex;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
-.tech-section .logo-slider::before, .tech-section .logo-slider::after {
+.tech-section .logos-container::before, .tech-section .logos-container::after {
   content: "";
   height: 72px;
   width: calc(72px/ 1.5);
@@ -2186,11 +2183,11 @@ button {
   background: linear-gradient(to right, var(--theme-background) 0%, rgba(255, 255, 255, 0) 100%);
   z-index: 2;
 }
-.tech-section .logo-slider::before {
+.tech-section .logos-container::before {
   left: 0;
   top: 0;
 }
-.tech-section .logo-slider::after {
+.tech-section .logos-container::after {
   top: 0;
   right: 0;
   transform: rotateZ(180deg);
@@ -2199,61 +2196,30 @@ button {
   -ms-transform: rotateZ(180deg);
   -o-transform: rotateZ(180deg);
 }
-.tech-section .logo-slide {
-  height: 72px;
+.tech-section .logo-slider {
   display: flex;
-  align-items: center;
+}
+.tech-section .logo-slider .logo-slide, .tech-section .logo-slider .below {
+  display: flex;
   animation: slidelogos 90s linear infinite;
   -webkit-animation: slidelogos 90s linear infinite;
 }
-.tech-section .logo-slide div {
+.tech-section .logo-slider .logo-slide img, .tech-section .logo-slider .below img {
+  padding: 0 32px;
   height: 42px;
-  width: 100%;
-  margin: 0 16px;
   filter: opacity(0.3);
   -webkit-filter: opacity(0.3);
 }
-.tech-section .logo-slide div:hover {
+.tech-section .logo-slider .logo-slide img:hover, .tech-section .logo-slider .below img:hover {
   filter: opacity(0.8);
   -webkit-filter: opacity(0.8);
 }
-.tech-section .logo-slide div img {
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-}
-.tech-section .logo-slide * .images {
-  height: 42px;
-  filter: opacity(0.6);
-  -webkit-filter: opacity(0.6);
-}
-.tech-section .logo-slide * .images::hover {
-  filter: opacity(1);
-  -webkit-filter: opacity(1);
-}
-.tech-section .below {
+.tech-section .logo-slider .below {
   animation: slidelogos 40s linear infinite reverse;
-  -webkit-animation: slidelogos 40s linear infinite reverse;
 }
-.tech-section .below div {
-  height: 42px;
-  margin: 0 42px !important;
-  padding-top: 16px;
-  filter: opacity(0.3);
-  -webkit-filter: opacity(0.3);
-}
-.tech-section .below div:hover, .tech-section .below div:focus {
-  filter: opacity(0.8);
-  -webkit-filter: opacity(0.8);
-}
-.tech-section .below div img {
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
+.tech-section .logo-slider .below img {
+  height: 62px;
+  padding: 0 40px;
 }
 
 .tech-sub-container {

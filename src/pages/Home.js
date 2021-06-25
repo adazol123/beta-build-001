@@ -1,4 +1,4 @@
-import React, {lazy, Suspense, useEffect} from 'react'
+import React, {lazy, Suspense} from 'react'
 // import  Card  from '../components/Card/Card'
 import { Link } from 'react-router-dom'
 import { penta } from '../components/asset-icons'
