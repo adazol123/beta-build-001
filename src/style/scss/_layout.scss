@@ -248,14 +248,14 @@
     &-xl {@extend .container; max-width: 1280px;}
     &-2xl {@extend .container; max-width: 1536px;}
 
-    background:rgba(var(--theme-container-background),$alpha: 0.55);
-    // backdrop-filter:  blur(8px);
-    width: 100%;
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
+    // background:rgba(var(--theme-container-background),$alpha: 0.55);
+    // // backdrop-filter:  blur(8px);
+    // width: 100%;
+    // border-radius: 8px;
+    // -webkit-border-radius: 8px;
+    // -moz-border-radius: 8px;
+    // -ms-border-radius: 8px;
+    // -o-border-radius: 8px;
 }
 
 
