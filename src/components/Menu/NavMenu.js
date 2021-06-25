@@ -14,9 +14,12 @@ const NavMenu = ({ toggleMenu, setToggleMenu}) => {
         } else document.documentElement.setAttribute('data-toggle', 'true')
         }, [toggleMenu])
     return (
-        <>
-        <div className={toggleMenu? 'nav-menu-wrapper' : 'nav-menu-hidden'}
-            onClick={() => setToggleMenu(false)}/>
+        <div>
+        {/********************  Backdrop ***********************/}
+        <div className={toggleMenu? 'nav-menu' : 'nav-menu-hidden'} onClick={() => setToggleMenu(false)}/> 
+        {/********************  Backdrop ***********************/}
+
+        
         <div className={`w-full flex-center-column pos-bottom-fixed ${toggleMenu? 'menu-bar' : 'menu-bar-hidden'}`}>
             <Suspense fallback={<h6 className='grid-center'>Loading</h6>}>
             <LazyFrame setToggleMenu={setToggleMenu}> 
@@ -46,7 +49,7 @@ const NavMenu = ({ toggleMenu, setToggleMenu}) => {
         </div>
 
         
-        </>
+        </div>
     )
 }
 

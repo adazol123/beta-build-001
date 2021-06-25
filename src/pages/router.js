@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 // import  PageNotFound  from './404'
 // import { About } from './About'
 // import { Components } from './Components'
+import Main from './Main'
 import  Home  from './Home'
 
 // const Home = lazy(() => import('./Home'))
@@ -15,7 +16,8 @@ const PageNotFound = lazy (() => import('./404'))
 export const router = () => {
     return (
         <Switch>
-                <Route path='/' exact component={Home}/>
+                <Route path='/' exact component={Main}/>
+                <Route path='/home' exact component={Home}/>
                 <Suspense fallback={<h2 className='grid-center'>Loading</h2>}>
                     <Switch>
                         <Route path='/components' exact component={Components}/>

@@ -1,0 +1,267 @@
+@import '../colors';
+@import '../layout';
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--nav-height);
+    // background-color: transparent;
+    // min-height: var(--nav-height);
+    // @extend .flex-horizontal-between;
+    // padding: 0 var(--space-4x);
+    z-index: 9999;
+
+    // background: var(--theme-background);
+    // box-shadow: var(--shadow-sm);
+    backdrop-filter: grayscale(0) ;
+    @extend .flex-vertical-between;
+
+    .nav-wrapper {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        background-color: transparent;
+        min-height: var(--nav-height);
+        @extend .flex-horizontal-between;
+        padding: 0 var(--space-4x);
+         * svg {
+             color: $green-100;
+         }
+    }
+
+
+
+
+    .icons {
+        color: $gray-500;
+        @extend .flex-horizontal-center;
+        &:hover, &:focus, &:active{
+            color: var(--theme-accent);
+        }
+    }
+
+}
+.animate-01{
+    transition: 0.4s ease;
+    -webkit-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+    -ms-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+}
+
+.menu-bar {
+    &-hidden{
+        @extend.animate-01;
+        z-index: 998;
+
+        transform: translateY(91%);
+        -webkit-transform: translateY(91%);
+        -moz-transform: translateY(91%);
+        -ms-transform: translateY(91%);
+        -o-transform: translateY(91%);
+        //overflow: hidden;
+}
+    @extend.animate-01;
+    z-index: 998;
+
+}
+
+//** Menubar Backdrop **//
+.nav-menu {
+    height: 100vh;
+    width: 100%;
+    opacity: 1;
+    position: fixed;
+    bottom: 0;
+    z-index: 997;
+    backdrop-filter: blur(10px);
+    @extend.animate-01;
+    &-hidden {
+        @extend .nav-menu;
+        opacity: 0;
+        height: 0;
+
+        position: fixed;
+        bottom: 0;
+        
+    }
+}
+
+.solarize, .solarize-center {
+    transition: .8s ease;
+    -webkit-transition: .8s ease;
+    -moz-transition: .8s ease;
+    -ms-transition: .8s ease;
+    -o-transition: .8s ease;
+}
+ .menu-bottom, .menu-top {
+    @extend .animate-01;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//** Main Hero Section **//
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: calc(100vh);
+    padding-top: var(--nav-height);
+
+    background-image:
+    url('https://images.unsplash.com/photo-1623860480757-d8ac409137af?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMTV8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+    background-position: center center;
+    background-size: cover;
+    
+    color: var(--theme-white);
+    @extend .flex-vertical-middle-center;
+    z-index: 2;
+    overflow: hidden;
+    h2 {
+        text-align: center;
+        font-size:  3.2rem;
+        font-weight: 200;
+        line-height: 3.5rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+
+    }
+    p {
+        font-size: 1rem;
+        letter-spacing: 0.01em;
+        font-weight: 300;
+        color: $gray-200;
+        
+        span {
+            position: relative;
+            color: var(--theme-white);
+            font-weight: 400;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 8ch;
+                height: 1px;
+                bottom: 2px;
+                left: 0;
+                border-radius: 2px;
+                background-color: var(--theme-accent);
+                opacity: 0.7;
+                z-index: -1;
+                -webkit-border-radius: 2px;
+                -moz-border-radius: 2px;
+                -ms-border-radius: 2px;
+                -o-border-radius: 2px;
+    }
+        }
+
+    }
+
+
+    &::before 
+    {
+        content: '';
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        top: 0;
+        left:  0;
+        background-color: $surface-dark;
+        filter: blur(1px);
+        opacity: 0.6;
+        z-index: -1;
+        transition: inherit ;
+        -webkit-transition: inherit ;
+        -moz-transition: inherit ;
+        -ms-transition: inherit ;
+        -o-transition: inherit ;
+        -webkit-filter: blur(1px);
+}
+    .icon-line-long, .next-arrow {
+        position: absolute;
+        left: auto;
+        bottom: 0;
+        height: 60px;
+        color: #fff;
+        background: #fff;
+        font-size: 50px;
+        animation: arrow 3s infinite;
+        -webkit-animation: arrow 3s infinite ease;
+        animation-direction: alternate;
+}
+
+    .icon-line-long {
+        &::before {
+            content: '';
+            height: 30px;
+            width: 1px;
+            border-right: 1px solid #fff;
+        }
+
+    }
+
+    .next-arrow {
+        &::after {
+            content: "Go Further";
+            text-transform: uppercase;
+            font-size: .6525rem;
+            font-weight: 500;
+            letter-spacing: 3px;
+            top: -40px;
+            left: -60px;
+            position: absolute;
+            width: 7.875rem;
+            height: 1.3rem;
+            text-align: center;
+
+        }
+    }
+    transition: 0.4s ease;
+    -webkit-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+    -ms-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+}
+//** Main Hero Section **//
+
+@keyframes arrow {
+    from { height: 60px}
+    to { height: 50px}
+}
+
+
+html[data-theme='light'] {
+    .hero-section{
+            background-image:
+            url('https://images.unsplash.com/photo-1623860480757-d8ac409137af?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMTV8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+            background-position: center center;
+            background-size: cover;
+            &::before {
+                opacity: 0.5;
+            }
+
+    }
+
+}
+html[data-theme='dark'] {
+    .hero-section{
+            background-image:
+            url('https://images.unsplash.com/photo-1576836165612-8bc9b07e7778?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTZ8fGNvZGV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60');
+            background-position: center center;
+            background-size: cover;
+            &::before {
+                opacity: 0.9;
+            }
+}
+}
+
+

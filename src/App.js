@@ -9,7 +9,7 @@ const PageNavigationListenerUtils = lazy(() => import('./utils/PageNavigationLis
 const App = () => {
   
   return (
-    <Router>
+    <Router >
       <Suspense  fallback={<h2 className='grid-center'>Loading</h2>}>
         <PageNavigationListenerUtils />
       </Suspense>
