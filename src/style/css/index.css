@@ -1381,11 +1381,14 @@ header .icons:hover, header .icons:focus, header .icons:active {
 }
 .hero-section h2 {
   text-align: center;
-  font-size: 3.2rem;
-  font-weight: 200;
-  line-height: 3.5rem;
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 2.5rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
+  -webkit-text-stroke: rgba(255, 255, 255, 0.3) 0.5px;
+  color: rgba(255, 255, 255, 0.2);
+  opacity: 1;
 }
 .hero-section p {
   font-size: 1rem;
@@ -2089,8 +2092,8 @@ button {
   height: 100%;
 }
 .sub-hero-section h2 {
-  font-size: 2.5rem;
-  line-height: 3rem;
+  font-size: 2rem;
+  line-height: 2.3rem;
   font-weight: 200;
   margin-bottom: 1rem;
   text-transform: uppercase;
@@ -2122,6 +2125,8 @@ button {
   flex-grow: 1;
   flex-basis: 0;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   background: var(--theme-forground);
   color: var(--theme-background);
@@ -2146,11 +2151,22 @@ button {
   right: 24px;
 }
 
+@media (min-width: 845px) {
+  .sub-hero-section {
+    flex-direction: row-reverse;
+  }
+  .sub-hero-section .sub-hero-first, .sub-hero-section .sub-hero-first {
+    justify-content: center;
+    align-items: center;
+  }
+  .sub-hero-section .sub-hero-first h2, .sub-hero-section .sub-hero-first h2 {
+    text-align: center;
+  }
+}
 /************************************************************************************************************/
 .tech-section {
   display: flex;
   align-items: center;
-  min-height: 100vh;
 }
 .tech-section h2 {
   margin: calc(var(--nav-height) * 2) 0 var(--space-8x) 0;
@@ -2168,7 +2184,7 @@ button {
 }
 .tech-section .logos-container {
   height: 100px;
-  width: 100%;
+  width: 90vw;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -2177,7 +2193,7 @@ button {
 }
 .tech-section .logos-container::before, .tech-section .logos-container::after {
   content: "";
-  height: 72px;
+  height: 100%;
   width: calc(72px/ 1.5);
   position: absolute;
   background: linear-gradient(to right, var(--theme-background) 0%, rgba(255, 255, 255, 0) 100%);
@@ -2198,16 +2214,15 @@ button {
 }
 .tech-section .logo-slider {
   display: flex;
-  gap: 0;
 }
 .tech-section .logo-slider .logo-slide, .tech-section .logo-slider .below {
   display: flex;
   width: 100%;
-  animation: slidelogos 90s linear infinite;
-  -webkit-animation: slidelogos 90s linear infinite;
+  animation: slidelogos 90s linear infinite reverse;
+  -webkit-animation: slidelogos 90s linear infinite reverse;
 }
 .tech-section .logo-slider .logo-slide img, .tech-section .logo-slider .below img {
-  padding: 0 32px;
+  padding: 0 2px;
   height: 42px;
   filter: opacity(0.3);
   -webkit-filter: opacity(0.3);
@@ -2222,9 +2237,9 @@ button {
   -webkit-filter: opacity(0.8);
 }
 .tech-section .logo-slider .logo-slide div, .tech-section .logo-slider .below div {
-  margin: 0 22px;
+  margin: 0 16px;
   height: 42px;
-  min-width: 80px;
+  min-width: 50px;
   filter: opacity(0.3);
   -webkit-filter: opacity(0.3);
   user-select: none;
@@ -2241,15 +2256,15 @@ button {
   -webkit-filter: opacity(0.8);
 }
 .tech-section .logo-slider .below {
-  animation: slidelogos 40s linear infinite reverse;
+  animation: slidelogos 40s linear infinite;
+  -webkit-animation: slidelogos 40s linear infinite;
 }
 .tech-section .logo-slider .below img {
-  height: 62px;
+  height: 72px;
   padding: 0 40px;
 }
 .tech-section .logo-slider .below div {
-  height: 62px;
-  margin: 0 20px;
+  height: 72px;
   width: 150px;
 }
 
@@ -2261,18 +2276,32 @@ button {
   padding: var(--space-16x) 0;
 }
 .tech-sub-container .tech-carousel {
-  background: url("https://images.unsplash.com/photo-1624514326167-7b4788f37dac?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80") no-repeat;
   background-position: center center;
   background-size: cover;
   min-width: 300px;
-  min-height: 300px;
+  min-height: 200px;
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
   padding: var(--space-4x);
-  box-shadow: 3px 5px 10px rgba(20, 0, 0, 0.7);
+  box-shadow: -1px 0px 4px rgba(20, 0, 0, 0.1), 3px 5px 10px rgba(20, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 0 32px;
+  text-align: center;
+  line-height: 1.4rem;
+}
+.tech-sub-container .tech-carousel h4 {
+  font-weight: 400;
+  color: var(--color-gray-400);
+}
+.tech-sub-container .tech-carousel p {
+  font-size: 3rem;
 }
 
 @keyframes slidelogos {

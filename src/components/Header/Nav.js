@@ -16,7 +16,7 @@ const Nav = () => {
     useEffect(() => {
         setPathname(pathname)
     }, [pathname])
-    
+    console.log(pathname)
     return (
         //** HEADER SECTION **//
         <>
@@ -24,7 +24,7 @@ const Nav = () => {
             <div className="nav-wrapper">
             {isPathname === '/' 
                 ?   <NavMain history={history} isPathname={isPathname} toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} /> 
-                :   <NavSub history={history} title="Component" toggleMenu={toggleMenu} setToggleMenu={setToggleMenu}/>}
+                :   <NavSub history={history} title={pathname} toggleMenu={toggleMenu} setToggleMenu={setToggleMenu}/>}
             </div>
         </header>
         <NavMenu toggleMenu={toggleMenu} setToggleMenu={setToggleMenu}/>
@@ -46,12 +46,13 @@ const NavSub = ( {title, history, setToggleMenu, toggleMenu}) => {
 const NavMain = ({ history, isPathname, setToggleMenu, toggleMenu}) => {
     return (
         <>
-            <Button icon={menu} onClick={() => setToggleMenu(!toggleMenu)}/>
             <Link 
                 className='icons'
                 to={{ pathname:'/', state: { fromDashboard: true }}} > 
-                    {logo}
+                    {/* {logo} */}
             </Link>
+            <Button icon={menu} onClick={() => setToggleMenu(!toggleMenu)}/>
+           
             {/* <DarkToggle  className='color-gray-500 nav-icon'/>  */}
          </>
     )

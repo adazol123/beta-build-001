@@ -60,7 +60,8 @@ const TechStackSection = () => {
             </div>
             <div className="tech-sub-container">
                 <div className="tech-carousel">
-                    
+                    <h4>Page is currently on <br /> building phase <br />  </h4>
+                    <p>🔨</p>
                 </div>
             </div>
 
