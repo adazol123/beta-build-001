@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from 'react'
 import { DarkToggle } from '../DarkToggle'
-import {logo, menu, arrow_left } from '../asset-icons'
+import {logo, menu, arrow_left, logo_name } from '../asset-icons'
 import { Link,  useHistory, useLocation } from 'react-router-dom'
 import NavMenu from '../Menu/NavMenu'
 import Button from '../Button/Button'
@@ -49,7 +49,7 @@ const NavMain = ({ history, isPathname, setToggleMenu, toggleMenu}) => {
             <Link 
                 className='icons'
                 to={{ pathname:'/', state: { fromDashboard: true }}} > 
-                    {/* {logo} */}
+                    {logo_name}
             </Link>
             <Button icon={menu} onClick={() => setToggleMenu(!toggleMenu)}/>
            

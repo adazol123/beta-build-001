@@ -1312,9 +1312,10 @@ header .nav-wrapper * svg {
   color: #daf1e9;
 }
 header .icons {
+  height: 14px;
   color: #7b8b93;
 }
-header .icons:hover, header .icons:focus, header .icons:active {
+header .icons:hover * svg, header .icons:focus * svg, header .icons:active * svg {
   color: var(--theme-accent);
 }
 
@@ -1367,7 +1368,7 @@ header .icons:hover, header .icons:focus, header .icons:active {
   width: 100%;
   height: calc(100vh);
   padding-top: var(--nav-height);
-  background-image: url("https://images.unsplash.com/photo-1623860480757-d8ac409137af?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMTV8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  background-image: url("https://source.unsplash.com/1200x2050");
   background-position: center center;
   background-size: cover;
   color: var(--theme-white);
@@ -1378,6 +1379,10 @@ header .icons:hover, header .icons:focus, header .icons:active {
   -moz-transition: 0.4s ease;
   -ms-transition: 0.4s ease;
   -o-transition: 0.4s ease;
+}
+.hero-section .logo {
+  height: 22px;
+  color: var(--theme-white);
 }
 .hero-section h2 {
   text-align: center;
@@ -1391,8 +1396,8 @@ header .icons:hover, header .icons:focus, header .icons:active {
   opacity: 1;
 }
 .hero-section p {
-  font-size: 1rem;
-  letter-spacing: 0.01em;
+  font-size: 1.25rem;
+  letter-spacing: 0.04em;
   font-weight: 300;
   color: #cad0d3;
 }
@@ -1476,7 +1481,7 @@ header .icons:hover, header .icons:focus, header .icons:active {
   }
 }
 html[data-theme=light] .hero-section {
-  background-image: url("https://images.unsplash.com/photo-1623860480757-d8ac409137af?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMTV8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  background-image: url("https://source.unsplash.com/1200x2050");
   background-position: center center;
   background-size: cover;
 }

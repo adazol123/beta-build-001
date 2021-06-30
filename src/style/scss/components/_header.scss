@@ -35,10 +35,14 @@ header {
 
 
     .icons {
+        height: 14px;
         color: $gray-500;
         @extend .flex-horizontal-center;
         &:hover, &:focus, &:active{
-            color: var(--theme-accent);
+            
+            * svg {
+                color: var(--theme-accent);
+            }
         }
     }
 
@@ -121,7 +125,7 @@ header {
     padding-top: var(--nav-height);
 
     background-image:
-    url('https://images.unsplash.com/photo-1623860480757-d8ac409137af?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMTV8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+    url('https://source.unsplash.com/1200x2050');
     background-position: center center;
     background-size: cover;
     
@@ -129,6 +133,10 @@ header {
     @extend .flex-vertical-middle-center;
     z-index: 2;
     overflow: hidden;
+    .logo {
+        height: 22px;
+        color: var(--theme-white);
+    }
     h2 {
         text-align: center;
         font-size:  2.4rem;
@@ -141,8 +149,8 @@ header {
         opacity: 1;
 }
     p {
-        font-size: 1rem;
-        letter-spacing: 0.01em;
+        font-size: 1.25rem;
+        letter-spacing: 0.04em;
         font-weight: 300;
         color: $gray-200;
         
@@ -246,7 +254,7 @@ header {
 html[data-theme='light'] {
     .hero-section{
             background-image:
-            url('https://images.unsplash.com/photo-1623860480757-d8ac409137af?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMTV8fHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+            url('https://source.unsplash.com/1200x2050');
             background-position: center center;
             background-size: cover;
             &::before {

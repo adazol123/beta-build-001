@@ -14,6 +14,7 @@ const Home = () => {
     return (
             <>
         <section className="hero-section">
+
             <h2>Experience Matters</h2>
             <p>Our <span>Experience</span> is our Great Asset</p>
             <a href="#content" className='next-arrow icon-line-long'> </a>
