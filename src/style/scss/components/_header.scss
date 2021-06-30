@@ -12,9 +12,9 @@ header {
     // padding: 0 var(--space-4x);
     z-index: 9999;
 
-    // background: var(--theme-background);
-    // box-shadow: var(--shadow-sm);
-    backdrop-filter: grayscale(0) blur(10px) ;
+    // background: var(--theme-forground);
+    box-shadow: var(--shadow-sm);
+    backdrop-filter: grayscale(0.7) blur(10px) ;
     @extend .flex-vertical-between;
 
     .nav-wrapper {
@@ -26,7 +26,7 @@ header {
         @extend .flex-horizontal-between;
         padding: 0 var(--space-4x);
          * svg {
-             color: $green-100;
+             color: var(--theme-accent);
          }
          
     }
@@ -144,12 +144,14 @@ header {
         line-height: 2.5rem;
         margin-bottom: 1rem;
         text-transform: uppercase;
-        -webkit-text-stroke: rgba(255,255,255, 0.3) .5px ;
-        color: rgba(255,255,255, 0.2);
+        // -webkit-text-stroke: rgba(255,255,255, 0.3) .5px ;
+        // -webkit-text-stroke: var(--theme-accent) 0.8px ;
+        color: rgba(255,255,255, 0.4);
+        // color: $blue-600;
         opacity: 1;
 }
     p {
-        font-size: 1.25rem;
+        font-size: 0.9rem;
         letter-spacing: 0.04em;
         font-weight: 300;
         color: $gray-200;
@@ -254,9 +256,10 @@ header {
 html[data-theme='light'] {
     .hero-section{
             background-image:
-            url('https://source.unsplash.com/1200x2050');
+            url('https://source.unsplash.com/900x1200');
             background-position: center center;
             background-size: cover;
+            object-fit: cover;
             &::before {
                 opacity: 0.5;
             }
@@ -267,7 +270,7 @@ html[data-theme='light'] {
 html[data-theme='dark'] {
     .hero-section{
             background-image:
-            url('https://images.unsplash.com/photo-1576836165612-8bc9b07e7778?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTZ8fGNvZGV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60');
+            url('https://images.unsplash.com/photo-1576836165612-8bc9b07e7778?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTZ8fGNvZGV8ZW58MHx8MHx8&ixlib=rb-1.2.1&fit=crop&fm=jpg&h=1200&ixlib=rb-1.2.1&q=80&w=900');
             background-position: center center;
             background-size: cover;
             &::before {
