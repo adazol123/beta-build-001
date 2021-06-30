@@ -1369,7 +1369,7 @@ header .icons:hover * svg, header .icons:focus * svg, header .icons:active * svg
   width: 100%;
   height: calc(100vh);
   padding-top: var(--nav-height);
-  background-image: url("https://source.unsplash.com/1200x2050");
+  background-image: url("https://source.unsplash.com/900x1200");
   background-position: center center;
   background-size: cover;
   color: var(--theme-white);
